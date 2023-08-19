@@ -1,0 +1,17 @@
+#N canvas 30 85 1366 685 12;
+#X msg 26 149 set \$1;
+#X obj 16 14 r param;
+#X obj 26 173 s \$2-r;
+#X obj 16 43 route \$1;
+#X obj 16 202 s \$2;
+#X obj 16 120 change -1e+37;
+#X obj 16 96 /;
+#X obj 16 72 t f f;
+#X connect 0 0 2 0;
+#X connect 1 0 3 0;
+#X connect 3 0 7 0;
+#X connect 5 0 0 0;
+#X connect 5 0 4 0;
+#X connect 6 0 5 0;
+#X connect 7 0 6 0;
+#X connect 7 1 6 1;

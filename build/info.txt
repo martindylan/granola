@@ -1,0 +1,3 @@
+granola~ es un sinte granular estocástico
+
+autor: dylan martin
