@@ -1369,7 +1369,7 @@ de unidad;
 #X connect 5 0 2 0;
 #X restore 230 200 pd out gain;
 #X obj 212 239 *~;
-#N canvas 914 35 449 708 midi-input 0;
+#N canvas 411 0 449 708 midi-input 0;
 #X obj 93 362 outlet;
 #X obj 93 163 - 1;
 #X obj 93 193 pack 0 0 0;
@@ -2785,7 +2785,7 @@ note_origin 40 7 0 10 #202020 #fcfcfc #202020 0 256;
 #f4f4dc #202020 #202020 0 1;
 #X obj 460 416 hradio 10 1 0 2 \$0-bendMode-s \$0-bendMode-r bend:_global
 25 4 0 10 #f4f4dc #202020 #202020 0;
-#X obj 460 401 hradio 10 1 0 2 \$0-poly-s \$0-poly-r mono 25 4 0 10
+#X obj 460 401 hradio 10 1 0 2 \$0-poly-s \$0-poly-r poly 25 4 0 10
 #f4f4dc #202020 #202020 0;
 #X obj 460 280 cnv 2 95 2 empty \$0-bar empty 20 12 0 14 #000000 #000000
 0;
@@ -2821,7 +2821,7 @@ ms 13 18 0 10 #f4f4dc #202020 #000000 0;
 0;
 #X obj 474 180 nbx 5 15 1 9999 0 0 \$0-grain-duration-s \$0-grain-duration-r
 durat. 0 -8 0 10 #202020 #f4f4dc #202020 0 256;
-#X obj 783 167 hradio 10 1 0 6 \$0-window-sel-s \$0-window-sel-r straight
+#X obj 783 167 hradio 10 1 0 6 \$0-window-sel-s \$0-window-sel-r hann
 0 17 0 10 #f4f4dc #202020 #202020 0;
 #X obj 570 168 cnv 15 198 48 empty \$0-text empty 20 12 0 14 #f4f4dc
 #000000 0;
@@ -2907,13 +2907,12 @@ ms 13 18 0 10 #f4f4dc #202020 #202020 0;
 41 8 0 10 #000000 #fcfcfc #000000 0 256;
 #X obj 689 153 tgl 10 0 \$0-rec-s \$0-rec-r rec 15 4 0 10 #f4f4dc #202020
 #202020 0 1;
-#X obj 569 219 cnv 1 1 7 empty \$0-playhead-vis empty 20 12 0 14 #f4f4dc
+#X obj 707 219 cnv 1 1 7 empty \$0-playhead-vis empty 20 12 0 14 #f4f4dc
 #000000 0;
 #X obj 560 153 cnv 2 2 275 empty \$0-bar empty 20 12 0 14 #000000 #000000
 0;
 #X obj 764 413 cnv 2 2 15 empty \$0-bar empty 20 12 0 14 #000000 #000000
 0;
-#X obj 12 112 pack;
 #X obj 460 240 tgl 10 0 \$0-grain-auto \$0-grain-auto-r auto-trigger
 15 4 0 10 #f4f4dc #202020 #202020 0 1;
 #X obj 460 115 nbx 2 15 1 99 0 0 \$0-grain-rate-numerator-s \$0-grain-rate-numerator-r
@@ -3184,23 +3183,23 @@ empty 0 -8 0 10 #202020 #f4f4dc #202020 0 256;
 #X connect 27 1 26 1;
 #X connect 30 0 4 1;
 #X restore 91 239 pd listen;
-#X obj 12 87 inlet, f 7;
+#X obj 12 112 inlet, f 7;
 #X obj 174 42 inlet~;
 #X obj 228 42 inlet~;
 #X obj 12 279 outlet~;
 #X obj 212 279 outlet~;
 #X obj 12 189 clone ./voice~ 5, f 29;
-#X connect 5 0 114 0;
+#X connect 5 0 113 0;
 #X connect 6 0 5 1;
 #X connect 6 0 7 1;
-#X connect 7 0 115 0;
-#X connect 8 0 116 0;
+#X connect 7 0 114 0;
+#X connect 8 0 115 0;
 #X connect 9 0 17 0;
 #X connect 10 0 24 0;
 #X connect 13 0 14 0;
-#X connect 15 0 116 1;
+#X connect 15 0 115 1;
 #X connect 16 0 17 0;
-#X connect 17 0 116 1;
+#X connect 17 0 115 1;
 #X connect 18 0 15 0;
 #X connect 24 0 23 0;
 #X connect 24 1 20 2;
@@ -3208,13 +3207,12 @@ empty 0 -8 0 10 #202020 #f4f4dc #202020 0 256;
 #X connect 24 3 25 0;
 #X connect 24 4 11 0;
 #X connect 25 0 26 0;
-#X connect 104 0 27 0;
-#X connect 104 0 8 0;
-#X connect 110 0 114 0;
-#X connect 110 1 115 0;
-#X connect 111 0 104 0;
-#X connect 112 0 20 0;
-#X connect 113 0 20 1;
-#X connect 116 0 5 0;
-#X connect 116 1 7 0;
+#X connect 109 0 113 0;
+#X connect 109 1 114 0;
+#X connect 110 0 27 0;
+#X connect 110 0 8 0;
+#X connect 111 0 20 0;
+#X connect 112 0 20 1;
+#X connect 115 0 5 0;
+#X connect 115 1 7 0;
 #X coords 0 -1 1 1 404 301 2 450 140;
