@@ -1,45 +1,44 @@
-param -name grain_duration_unit -list ms/samp -default 0
-param -name grain_duration -min 1 -max 9999 -default 300
-param -name grain_rate_unit -list ms/samp -default 0
-param -name grain_rate -min 1 -max 9999 -default 100
-param -name sync -list off/on -default 0
-param -name sync_num -min 1 -max 99 -nsteps 99 -default 1
-param -name sync_den -min 1 -max 99 -nsteps 99 -default 1
-param -name grain_direction -list forward/backwards/random -default 0
-param -name playhead -min 0 -max 100 -default 0
-param -name trim_start -min 0 -max 100 -default 0
-param -name trim_end -min 0 -max 100 -default 100
-param -name reset -list off/on -default 0
-param -name play -list off/on -default 0
-param -name pingpong -list off/on -default 0
-param -name speed -label % -min -9999 -max 9999 -default 100
-param -name note_origin -min -127 -max 127 -default 48
-param -name window -list straight/cos/tri/tridown/triup/custom -default 1
-param -name fade_in -list off/on -default 0
-param -name fade_out -list off/on -default 0
-param -name fade_time -label ms -min 0 -max 999 -default 10
-param -name attack -label ms -min 0 -max 9999 -default 0
-param -name decay -label ms -min 0 -max 9999 -default 0
-param -name sustain -label % -min 0 -max 100 -default 100
-param -name release -label ms -min 0 -max 9999 -default 0
-param -name legato -list off/on
-param -name voices -list monophonic/polyphonic
-param -name bend_mode -list global/last_note
-param -name offset_playhead_unit  -list ms/samp -default 0
-param -name offset_playhead -min -9999 -max 9999 -default 0
-param -name offset_playhead_amount -label % -min 0 -max 100 -default 0
-param -name offset_playhead_precis -label % -min 0 -max 100 -default 0
-param -name offset_pitch_unit -list mid/cent -default 0
-param -name offset_pitch -min -999 -max 999 -default 0
-param -name offset_pitch_amount -label % -min 0 -max 100 -default 0
-param -name offset_pitch_precis -label % -min 0 -max 100 -default 0
-param -name offset_duration_unit -list ms/samp -default 0
-param -name offset_duration -min -9999 -max 9999 -default 0
-param -name offset_duration_amount -label % -min 0 -max 100 -default 0
-param -name offset_duration_precis -label % -min 0 -max 100 -default 0
-param -name stereo -label % -min 0 -max 100 -default 0
-param -name stereo_chance -label % -min 0 -max 100 -default 0
-param -name out -label dB -min -100 -max 12 -default 0
+param -name grain_duration_unit -list ms/samp;
+param -name grain_duration -min 1 -max 9999;
+param -name grain_rate_unit -list ms/samp;
+param -name grain_rate -min 1 -max 9999;
+param -name sync -list off/on;
+param -name sync_num -min 1 -max 99 -nsteps 99;
+param -name sync_den -min 1 -max 99 -nsteps 99;
+param -name grain_direction -list forward/backwards/random;
+param -name playhead -min 0 -max 100;
+param -name trim_start -min 0 -max 100;
+param -name trim_end -min 0 -max 100;
+param -name reset -list off/on;
+param -name play -list off/on;
+param -name pingpong -list off/on;
+param -name speed -label % -min -9999 -max 9999;
+param -name note_origin -min -127 -max 127;
+param -name window -list straight/cos/tri/tridown/triup/custom;
+param -name fade_in -list off/on;
+param -name fade_out -list off/on;
+param -name fade_time -label ms -min 0 -max 999;
+param -name attack -label ms -min 0 -max 9999;
+param -name decay -label ms -min 0 -max 9999;
+param -name sustain -label % -min 0 -max 100;
+param -name release -label ms -min 0 -max 9999;
+param -name voices -list monophonic/polyphonic;
+param -name bend_mode -list global/last_note;
+param -name offset_playhead_unit  -list ms/samp;
+param -name offset_playhead -min -9999 -max 9999;
+param -name offset_playhead_amount -label % -min 0 -max 100;
+param -name offset_playhead_precis -label % -min 0 -max 100;
+param -name offset_pitch_unit -list mid/cent;
+param -name offset_pitch -min -999 -max 999;
+param -name offset_pitch_amount -label % -min 0 -max 100;
+param -name offset_pitch_precis -label % -min 0 -max 100;
+param -name offset_duration_unit -list ms/samp;
+param -name offset_duration -min -9999 -max 9999;
+param -name offset_duration_amount -label % -min 0 -max 100;
+param -name offset_duration_precis -label % -min 0 -max 100;
+param -name stereo -label % -min 0 -max 100;
+param -name stereo_chance -label % -min 0 -max 100;
+param -name out -label dB -min -100 -max 12;
 
 type instrument;
 code dMaf;
