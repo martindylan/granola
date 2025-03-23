@@ -22,6 +22,7 @@ param -name attack -label ms -min 0 -max 9999;
 param -name decay -label ms -min 0 -max 9999;
 param -name sustain -label % -min 0 -max 100;
 param -name release -label ms -min 0 -max 9999;
+param -name legato -list off/on;
 param -name voices -list monophonic/polyphonic;
 param -name bend_mode -list global/last_note;
 param -name offset_playhead_unit  -list ms/samp;
